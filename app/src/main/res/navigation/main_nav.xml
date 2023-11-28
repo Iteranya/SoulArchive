@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/galleryFragment">
+
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.example.soularchive.view.gallery.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/imageFullFragment"
+        android:name="com.example.soularchive.view.gallery.ImageFullFragment"
+        android:label="fragment_image_full"
+        tools:layout="@layout/fragment_image_full" />
+    <fragment
+        android:id="@+id/collectionFragment"
+        android:name="com.example.soularchive.view.profile.CollectionFragment"
+        android:label="fragment_collection"
+        tools:layout="@layout/fragment_collection" />
+</navigation>

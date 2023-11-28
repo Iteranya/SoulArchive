@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "351830423863",
+    "project_id": "soul-archive-f2659",
+    "storage_bucket": "soul-archive-f2659.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351830423863:android:a767246427808282de42b2",
+        "android_client_info": {
+          "package_name": "com.example.soularchive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj8cJTxAaaivenvGVDOtIdJHhm1sUyuOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/upload_nav"
+    app:startDestination="@id/uploadFragment">
+
+    <fragment
+        android:id="@+id/uploadFragment"
+        android:name="com.example.soularchive.view.upload.UploadFragment"
+        android:label="fragment_upload"
+        tools:layout="@layout/fragment_upload"/>
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.example.soularchive.view.upload.VerificationFragment"
+        android:label="fragment_verification"
+        tools:layout="@layout/fragment_verification" />
+</navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/commission_nav"
+    app:startDestination="@id/createComFragment">
+
+    <fragment
+        android:id="@+id/createComFragment"
+        android:name="com.example.soularchive.view.commission.CreateComFragment"
+        android:label="fragment_create_com"
+        tools:layout="@layout/fragment_create_com" />
+    <fragment
+        android:id="@+id/viewComFragment"
+        android:name="com.example.soularchive.view.commission.ViewComFragment"
+        android:label="fragment_view_com"
+        tools:layout="@layout/fragment_view_com" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.soularchive.view.commission.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+</navigation>
