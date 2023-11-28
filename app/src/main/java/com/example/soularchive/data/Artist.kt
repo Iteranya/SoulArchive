@@ -1,7 +1,7 @@
 package com.example.soularchive.data
 
 data class Artist(
-    val id:String,
+    var id:String,
     val username:String,
     val photo:String,
     val creation: List<String>,//Post IDs
