@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.soularchive.view.auth.LoginFragment"
+        android:name="com.example.soularchive.view.auth.ui.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login"/>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.soularchive.view.auth.RegisterFragment"
+        android:name="com.example.soularchive.view.auth.ui.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register"/>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.soularchive.view.auth.SplashFragment"
+        android:name="com.example.soularchive.view.auth.ui.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" />
 </navigation>

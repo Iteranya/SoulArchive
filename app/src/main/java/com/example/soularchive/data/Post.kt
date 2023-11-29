@@ -9,5 +9,6 @@ data class Post(
     val verified: Boolean = false,
     val likes: Int = 0,
     val favorite: Int = 0,
-    val tags:List<String>
+    val tags:List<String>,
+    val uploaded: Int
 )

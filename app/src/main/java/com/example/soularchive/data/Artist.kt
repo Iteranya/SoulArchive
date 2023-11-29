@@ -5,7 +5,7 @@ data class Artist(
     val username:String,
     val photo:String,
     val creation: List<String>,//Post IDs
-    val collection: List<String>,//Post IDs
+    val collection: Map<String,String>,//Post IDs
     val featured: List<String>,//Post IDs
     val followed: List<String>//Artist IDs
 )
