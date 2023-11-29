@@ -32,16 +32,16 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Login"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4" />
+        app:layout_constraintBottom_toTopOf="@+id/tvRegisterLogin"
+        app:layout_constraintEnd_toEndOf="@+id/tvRegisterLogin"
+        app:layout_constraintStart_toStartOf="@+id/tvRegisterLogin" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvRegisterLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="Disclaimers and Such"
+        android:text="Register Instead??"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

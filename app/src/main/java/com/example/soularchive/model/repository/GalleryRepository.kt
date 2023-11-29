@@ -49,18 +49,28 @@ object GalleryRepository {
     }
 
     suspend fun getPosts(
-        posts:(QuerySnapshot) -> Unit
+        posts:(Result<QuerySnapshot>) -> Unit
     ){//Lambda Statement Go BRRRRRRR~
-        val gallery = galleryRef.orderBy("upload").get().await()
-        posts(gallery)
+        try{
+            val gallery = galleryRef.orderBy("upload").get().await()
+            posts(Result.success(gallery))
+        }catch (e:Exception){
+            posts(Result.failure(e))
+        }
+
     }
 
     suspend fun getPosts(
         sortBy : String,
-        posts:(QuerySnapshot)-> Unit
+        posts:(Result<QuerySnapshot>)-> Unit
     ){
-        val gallery = galleryRef.orderBy(sortBy).get().await()
-        posts(gallery)
+        try{
+            val gallery = galleryRef.orderBy(sortBy).get().await()
+            posts(Result.success(gallery))
+        }catch (e:Exception){
+            posts(Result.failure(e))
+        }
+
     }
 
     suspend fun addCollection(
