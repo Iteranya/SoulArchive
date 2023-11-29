@@ -34,7 +34,8 @@
         android:layout_marginBottom="32dp"
         android:text="Login"
         app:layout_constraintBottom_toTopOf="@+id/tvDisclaimerRegister"
-        tools:layout_editor_absoluteX="162dp" />
+        app:layout_constraintEnd_toEndOf="@+id/tvDisclaimerRegister"
+        app:layout_constraintStart_toStartOf="@+id/tvDisclaimerRegister" />
 
     <TextView
         android:id="@+id/tvDisclaimerRegister"
@@ -62,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvRegisterWelcome" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/edEmailRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -74,15 +75,15 @@
         app:layout_constraintTop_toBottomOf="@+id/edUsernameRegister" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/edPasswordRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintEnd_toEndOf="@+id/edEmailRegister"
+        app:layout_constraintStart_toStartOf="@+id/edEmailRegister"
+        app:layout_constraintTop_toBottomOf="@+id/edEmailRegister" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
