@@ -8,6 +8,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.Firebase
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
@@ -69,6 +70,19 @@ object GalleryRepository {
             posts(Result.success(gallery))
         }catch (e:Exception){
             posts(Result.failure(e))
+        }
+
+    }
+
+    suspend fun getArtist(
+        id: String,
+        artist:(Result<DocumentSnapshot>)-> Unit
+    ){
+        try{
+            val data = artistRef.document(id).get().await()
+            artist(Result.success(data))
+        }catch (e:Exception){
+            artist(Result.failure(e))
         }
 
     }

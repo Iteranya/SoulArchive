@@ -4,8 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.soularchive.data.Artist
 import com.example.soularchive.data.Post
 import com.example.soularchive.model.repository.GalleryRepository
+import com.google.firebase.firestore.toObject
 import com.google.firebase.firestore.toObjects
 import kotlinx.coroutines.launch
 
@@ -18,6 +20,7 @@ class GalleryViewModel : ViewModel() {
     val gallery: LiveData<List<Post>> = _gallery
 
     val currentPost = MutableLiveData<Post>()
+    val currentArtist = MutableLiveData<Artist>()
 
     val loading = MutableLiveData<Boolean>()
 
@@ -40,6 +43,17 @@ class GalleryViewModel : ViewModel() {
             GalleryRepository.getPosts(sort.name) {
                 if(it.isSuccess && it.getOrNull()!=null){
                     _gallery.value = it.getOrNull()!!.toObjects()
+                }
+                loading.value = false
+            }
+        }
+    }
+
+    fun getArtist(id:String){
+        viewModelScope.launch {
+            GalleryRepository.getArtist(id){
+                if(it.isSuccess && it.getOrNull()!=null){
+                    currentArtist.value = it.getOrNull()!!.toObject()
                 }
                 loading.value = false
             }

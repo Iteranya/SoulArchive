@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.example.soularchive.R
 import com.example.soularchive.databinding.FragmentImageFullBinding
 
@@ -22,7 +23,7 @@ class ImageFullFragment : Fragment() {
         binding = FragmentImageFullBinding.inflate(layoutInflater,container,false)
 
         galleryViewModel.currentPost.observe(requireActivity()){
-            //Insert da images here, humu humu~
+            Glide.with(binding.imgArt).load(it.media).into(binding.imgArt)
         }
         return binding.root
     }
