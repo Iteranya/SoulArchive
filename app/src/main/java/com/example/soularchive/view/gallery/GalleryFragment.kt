@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.soularchive.R
 import com.example.soularchive.databinding.FragmentGalleryBinding
@@ -26,10 +28,10 @@ class GalleryFragment : Fragment() {
         galleryViewModel.loading.observe(requireActivity()){
             //Loading :)
         }
-        galleryViewModel.gallery.observe(requireActivity()){
-            adapter = GalleryAdapter(it){
+        galleryViewModel.gallery.observe(requireActivity()) { posts ->
+            adapter = GalleryAdapter(posts) { post ->
+                galleryViewModel.currentPost.value = post
                 findNavController().navigate(R.id.imageFullFragment)
-                //TODO: Also Navigate the Post but I'm sleepy so later.
             }
         }
         return binding.root

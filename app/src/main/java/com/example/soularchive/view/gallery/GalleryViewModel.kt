@@ -17,6 +17,8 @@ class GalleryViewModel : ViewModel() {
     private val _gallery = MutableLiveData<List<Post>>()
     val gallery: LiveData<List<Post>> = _gallery
 
+    val currentPost = MutableLiveData<Post>()
+
     val loading = MutableLiveData<Boolean>()
 
     fun getPosts(){
