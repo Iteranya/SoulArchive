@@ -31,7 +31,7 @@ object AuthRepository {
         artist: Artist, email: String, password: String,
         onResult: (Void?,Exception?) -> Unit,
     ){
-        auth.createUserWithEmailAndPassword(email,password)
+        auth.createUserWithEmailAndPassword(email,password)//Register
             .addOnSuccessListener{newUser->
                 artist.id = newUser.user?.uid.toString()
                 db.collection(References.ARTIST).document(newUser.user!!.uid)
