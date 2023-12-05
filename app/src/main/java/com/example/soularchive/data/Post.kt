@@ -1,7 +1,7 @@
 package com.example.soularchive.data
 
 data class Post(
-    val id:String,
+    val id:String = "",
     val title: String,
     val artistId:String,
     val description: String,
@@ -9,6 +9,6 @@ data class Post(
     val verified: Boolean = false,
     val likes: Int = 0,
     val favorite: Int = 0,
-    val tags:List<String>,
+    val tags:List<String> = emptyList(),
     val uploaded: Int
 )

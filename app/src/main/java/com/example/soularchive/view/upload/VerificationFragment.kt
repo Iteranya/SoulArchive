@@ -19,7 +19,6 @@ class VerificationFragment : Fragment() {
     ): View? {
         binding = FragmentUploadBinding.inflate(layoutInflater,container,false)
         viewModel = ViewModelProvider(requireActivity())[UploadViewModel::class.java]
-        //Button~
 
         return binding.root
     }
