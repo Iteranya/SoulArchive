@@ -11,8 +11,17 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var viewModel: ProfileViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val artistId = intent.getStringExtra(ARTIST_ID)
+
         binding = ActivityProfileBinding.inflate(layoutInflater)
         viewModel = ViewModelProvider(this)[ProfileViewModel::class.java]
+        viewModel.getArtistData(artistId!!)
+
         setContentView(binding.root)
+    }
+
+    companion object{
+        const val ARTIST_ID = "artist"
     }
 }
