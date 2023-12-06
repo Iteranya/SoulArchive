@@ -16,7 +16,7 @@ class VerificationFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentUploadBinding.inflate(layoutInflater,container,false)
         viewModel = ViewModelProvider(requireActivity())[UploadViewModel::class.java]
 
