@@ -18,6 +18,7 @@ class ProfileActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this)[ProfileViewModel::class.java]
         viewModel.getArtistData(artistId!!)
 
+
         setContentView(binding.root)
     }
 

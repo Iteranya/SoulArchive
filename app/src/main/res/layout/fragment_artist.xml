@@ -14,7 +14,8 @@
             android:id="@+id/imgArtistBanner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:minHeight="250dp"
+            android:maxHeight="200dp"
+            android:minHeight="150dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -22,33 +23,13 @@
 
         <ImageView
             android:id="@+id/imgArtistPfp"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="-32dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgArtistBanner"
             tools:src="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/tvArtistUsername"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="Name Here"
-            app:layout_constraintEnd_toStartOf="@+id/btnMessage"
-            app:layout_constraintStart_toEndOf="@+id/imgArtistPfp"
-            app:layout_constraintTop_toTopOf="@+id/imgArtistPfp" />
-
-        <TextView
-            android:id="@+id/tvArtistAbout"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="CustomDescription"
-            app:layout_constraintBottom_toBottomOf="@+id/imgArtistPfp"
-            app:layout_constraintEnd_toEndOf="@+id/tvArtistUsername"
-            app:layout_constraintStart_toEndOf="@+id/imgArtistPfp"
-            app:layout_constraintTop_toBottomOf="@+id/tvArtistUsername" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -56,27 +37,29 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescArtist" />
+
+        <TextView
+            android:id="@+id/tvNameArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/imgArtistPfp"
+            app:layout_constraintStart_toStartOf="@+id/imgArtistPfp"
             app:layout_constraintTop_toBottomOf="@+id/imgArtistPfp" />
 
-        <ImageView
-            android:id="@+id/btnFollow"
-            android:layout_width="35dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/star_filled"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgArtistBanner" />
-
-        <ImageView
-            android:id="@+id/btnMessage"
-            android:layout_width="35dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/chat"
-            app:layout_constraintBottom_toBottomOf="@+id/btnFollow"
-            app:layout_constraintEnd_toStartOf="@+id/btnFollow"
-            app:layout_constraintTop_toTopOf="@+id/btnFollow" />
+        <TextView
+            android:id="@+id/tvDescArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:maxLines="4"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/tvNameArtist"
+            app:layout_constraintStart_toStartOf="@+id/tvNameArtist"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameArtist" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -10,6 +10,7 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FieldValue
+import com.google.firebase.firestore.Filter
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.QuerySnapshot
@@ -74,6 +75,17 @@ object GalleryRepository {
 
     }
 
+    suspend fun getPostArtist(
+        id:String,
+        posts:(Result<QuerySnapshot>)-> Unit
+    ){
+        try{
+            val gallery = galleryRef.whereEqualTo("artistId",id).get().await()
+            posts(Result.success(gallery))
+        }catch (e:Exception){
+            posts(Result.failure(e))
+        }
+    }
     suspend fun getArtist(
         id: String,
         artist:(Result<DocumentSnapshot>)-> Unit

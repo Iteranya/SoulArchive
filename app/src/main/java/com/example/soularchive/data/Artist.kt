@@ -7,5 +7,7 @@ data class Artist(
     val creation: List<String> = emptyList(),//Post IDs
     val collection: List<Collection> = emptyList(),//Post IDs
     val featured: List<String> = emptyList(),//Post IDs
-    val followed: List<String> = emptyList()//Artist IDs
+    val followed: List<String> = emptyList(),//Artist IDs
+    val banner: String ="",
+    val description: String = ""
 )
