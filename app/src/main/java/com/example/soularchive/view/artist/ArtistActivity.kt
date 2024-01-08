@@ -1,22 +1,21 @@
 package com.example.soularchive.view.artist
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.soularchive.databinding.ActivityProfileBinding
 
-class ProfileActivity : AppCompatActivity() {
+class ArtistActivity : AppCompatActivity() {
     private lateinit var binding : ActivityProfileBinding
-    private lateinit var viewModel: ProfileViewModel
+    private lateinit var viewModel: ArtistViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val artistId = intent.getStringExtra(ARTIST_ID)
 
         binding = ActivityProfileBinding.inflate(layoutInflater)
-        viewModel = ViewModelProvider(this)[ProfileViewModel::class.java]
+        viewModel = ViewModelProvider(this)[ArtistViewModel::class.java]
         viewModel.getArtistData(artistId!!)
-
 
         setContentView(binding.root)
     }

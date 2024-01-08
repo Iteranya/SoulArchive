@@ -14,6 +14,12 @@
         android:icon="@drawable/favorite"
         android:title="Favorites" />
     <item
+        android:id="@+id/menu_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/upload"
+        android:title="Upload" />
+    <item
         android:id="@+id/menu_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

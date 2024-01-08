@@ -11,7 +11,7 @@ import com.google.firebase.firestore.toObject
 import com.google.firebase.firestore.toObjects
 import kotlinx.coroutines.launch
 
-class ProfileViewModel: ViewModel() {
+class ArtistViewModel: ViewModel() {
 
     private val _message = MutableLiveData<String>()
     val message: LiveData<String> = _message

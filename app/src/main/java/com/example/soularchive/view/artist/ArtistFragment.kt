@@ -14,12 +14,12 @@ import com.example.soularchive.view.gallery.GalleryAdapter
 
 class ArtistFragment : Fragment() {
     private lateinit var binding : FragmentArtistBinding
-    private lateinit var viewModel: ProfileViewModel
+    private lateinit var viewModel: ArtistViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        viewModel = ViewModelProvider(requireActivity())[ProfileViewModel::class.java]
+        viewModel = ViewModelProvider(requireActivity())[ArtistViewModel::class.java]
         binding = FragmentArtistBinding.inflate(layoutInflater,container,false)
 
         viewModel.artist.observe(requireActivity()){

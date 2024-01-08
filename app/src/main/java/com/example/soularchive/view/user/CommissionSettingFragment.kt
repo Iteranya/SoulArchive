@@ -1,4 +1,4 @@
-package com.example.soularchive.view.upload
+package com.example.soularchive.view.user
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,16 +8,16 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.soularchive.databinding.FragmentUploadBinding
 
-
-class VerificationFragment : Fragment() {
+class CommissionSettingFragment : Fragment() {
     private lateinit var binding : FragmentUploadBinding
-    private lateinit var viewModel: UploadViewModel
+    private lateinit var viewModel : UserViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View{
         binding = FragmentUploadBinding.inflate(layoutInflater,container,false)
-        viewModel = ViewModelProvider(requireActivity())[UploadViewModel::class.java]
+        viewModel = ViewModelProvider(requireActivity())[UserViewModel::class.java]
 
         return binding.root
     }
