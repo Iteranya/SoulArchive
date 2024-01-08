@@ -13,13 +13,10 @@
         android:theme="@style/Theme.SoulArchive"
         tools:targetApi="31">
         <activity
-            android:name=".view.commission.CommissionActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.upload.UploadActivity"
             android:exported="false" />
         <activity
-            android:name=".view.profile.ProfileActivity"
+            android:name=".view.artist.ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".view.gallery.GalleryActivity"

@@ -1,14 +1,13 @@
-package com.example.soularchive.view.profile
+package com.example.soularchive.view.artist
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bumptech.glide.Glide
-import com.example.soularchive.R
 import com.example.soularchive.databinding.FragmentArtistBinding
 import com.example.soularchive.view.gallery.GalleryAdapter
 
@@ -36,8 +35,6 @@ class ArtistFragment : Fragment() {
                 //navigate to full
             }
         }
-
-
 
         return binding.root
     }

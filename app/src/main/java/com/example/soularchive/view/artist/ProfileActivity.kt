@@ -1,9 +1,8 @@
-package com.example.soularchive.view.profile
+package com.example.soularchive.view.artist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
-import com.example.soularchive.R
 import com.example.soularchive.databinding.ActivityProfileBinding
 
 class ProfileActivity : AppCompatActivity() {

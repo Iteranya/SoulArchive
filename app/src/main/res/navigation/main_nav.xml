@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_image_full" />
     <fragment
         android:id="@+id/collectionFragment"
-        android:name="com.example.soularchive.view.profile.CollectionFragment"
+        android:name="com.example.soularchive.view.gallery.CollectionFragment"
         android:label="fragment_collection"
         tools:layout="@layout/fragment_collection" />
 </navigation>

@@ -4,62 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.profile.ArtistFragment">
+    tools:context=".view.artist.ArtistFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" >
 
-        <ImageView
-            android:id="@+id/imgArtistBanner"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:maxHeight="200dp"
-            android:minHeight="150dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imgArtistPfp"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="-32dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgArtistBanner"
-            tools:src="@tools:sample/avatars" />
+            <ImageView
+                android:id="@+id/imgArtistBanner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxHeight="200dp"
+                android:minHeight="150dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDescArtist" />
+            <ImageView
+                android:id="@+id/imgArtistPfp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgArtistBanner"
+                tools:src="@tools:sample/avatars" />
 
-        <TextView
-            android:id="@+id/tvNameArtist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="@+id/imgArtistPfp"
-            app:layout_constraintStart_toStartOf="@+id/imgArtistPfp"
-            app:layout_constraintTop_toBottomOf="@+id/imgArtistPfp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgArtistPfp" />
 
-        <TextView
-            android:id="@+id/tvDescArtist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:maxLines="4"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="@+id/tvNameArtist"
-            app:layout_constraintStart_toStartOf="@+id/tvNameArtist"
-            app:layout_constraintTop_toBottomOf="@+id/tvNameArtist" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tvNameArtist"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Name"
+                app:layout_constraintEnd_toStartOf="@+id/buttonMessage"
+                app:layout_constraintStart_toEndOf="@+id/imgArtistPfp"
+                app:layout_constraintTop_toTopOf="@+id/imgArtistPfp" />
+
+            <TextView
+                android:id="@+id/tvDescArtist"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxLines="4"
+                android:text="UserId"
+                app:layout_constraintEnd_toEndOf="@+id/tvNameArtist"
+                app:layout_constraintStart_toStartOf="@+id/tvNameArtist"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameArtist" />
+
+            <ImageButton
+                android:id="@+id/buttonMessage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/chat"
+                app:layout_constraintBottom_toBottomOf="@+id/buttonFavorite"
+                app:layout_constraintEnd_toStartOf="@+id/buttonFavorite"
+                app:layout_constraintTop_toTopOf="@+id/buttonFavorite"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/buttonFavorite"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/favorite"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgArtistBanner" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 </FrameLayout>

@@ -1,24 +1,17 @@
 package com.example.soularchive.model.repository
 
-import com.example.soularchive.data.Artist
 import com.example.soularchive.data.Collection
-import com.example.soularchive.data.Post
 import com.example.soularchive.model.References
-import com.google.android.gms.tasks.Task
 import com.google.firebase.Firebase
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentSnapshot
-import com.google.firebase.firestore.FieldValue
-import com.google.firebase.firestore.Filter
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.firestore
 import kotlinx.coroutines.tasks.await
-import java.lang.Exception
 
 object GalleryRepository {
+    //NoSQL
     private val auth = FirebaseAuth.getInstance()
     private val db: FirebaseFirestore by lazy {
         Firebase.firestore

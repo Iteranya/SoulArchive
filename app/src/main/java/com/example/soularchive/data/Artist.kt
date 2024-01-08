@@ -1,6 +1,6 @@
 package com.example.soularchive.data
 
-data class Artist(
+data class Artist(//User
     var id:String="",
     val username:String,
     val photo:String="",

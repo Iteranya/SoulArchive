@@ -1,4 +1,4 @@
-package com.example.soularchive.view.profile
+package com.example.soularchive.view.artist
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

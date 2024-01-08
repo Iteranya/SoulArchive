@@ -1,4 +1,4 @@
-package com.example.soularchive.view.profile
+package com.example.soularchive.view.gallery
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
