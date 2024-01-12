@@ -1,5 +1,6 @@
 package com.example.soularchive.model.repository
 
+import android.util.Log
 import com.example.soularchive.data.Collection
 import com.example.soularchive.model.References
 import com.google.firebase.Firebase
@@ -47,7 +48,8 @@ object GalleryRepository {
         posts:(Result<QuerySnapshot>) -> Unit
     ){//Lambda Statement Go BRRRRRRR~
         try{
-            val gallery = galleryRef.orderBy("upload").get().await()
+            val gallery = galleryRef.orderBy("uploaded").get().await()
+            Log.i("mitochondria",gallery.size().toString())
             posts(Result.success(gallery))
         }catch (e:Exception){
             posts(Result.failure(e))

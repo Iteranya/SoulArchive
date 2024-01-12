@@ -1,5 +1,6 @@
 package com.example.soularchive.view.gallery
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -28,8 +29,11 @@ class GalleryViewModel : ViewModel() {
         viewModelScope.launch {
             loading.value = true
             GalleryRepository.getPosts {
-                if(it.isSuccess && it.getOrNull()!=null){
-                    _gallery.value = it.getOrNull()!!.toObjects()
+                if(it.getOrNull()!=null){
+                    _gallery.value = it.getOrThrow().toObjects()
+                }
+                else{
+                    Log.i("mitochondria", "Nulllll why ${it.getOrThrow()}")
                 }
 
                 loading.value = false
